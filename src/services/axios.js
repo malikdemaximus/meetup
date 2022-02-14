@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const axiosInstance = axios.create({
   timeout: 3000
-})
+});
 
 axiosInstance.interceptors.request.use(function(config) {
   const token = localStorage.getItem('meetuper-jwt') || ''
